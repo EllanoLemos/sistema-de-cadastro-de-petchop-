@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Imagens\Captura de tela 2026-07-09 114102.png" />
+    <None Remove="Imagens\Captura de tela 2026-08-14 190347.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagens\Captura de tela 2026-07-09 114102.png" />
+    <Resource Include="Imagens\Captura de tela 2026-08-14 190347.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="InfoAgendamentos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfoClientes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfoHistorico.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfoPets.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfoRelatorio.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfoServicos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="InfoAgendamentos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfoHistorico.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfoPets.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfoRelatorio.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfoServicos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

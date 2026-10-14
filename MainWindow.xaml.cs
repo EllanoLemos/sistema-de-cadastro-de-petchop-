@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cadastro_PetChop_Versao4_Ellano
+namespace Cadastro_de_PetChop_Versao5_EllanoLemos
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -19,39 +19,79 @@ namespace Cadastro_PetChop_Versao4_Ellano
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
-        private void btn_sair_Click(object sender, RoutedEventArgs e)
+        private void btnSair_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void btn_clientes_Click(object sender, RoutedEventArgs e)
+        private void btnClientes_Click(object sender, RoutedEventArgs e)
         {
-           
-            
+            // 1. Cria a instância da nova tela
+            InfoClientes telaCadastro = new InfoClientes();
 
-            FramePrincipal.Visibility = Visibility.Visible;
-            FramePrincipal.Navigate(new InfoCliente());
+            telaCadastro.Owner = this;
+
+            // 2. Abre a tela (ShowDialog bloqueia a principal até fechar a de cadastro)
+            telaCadastro.ShowDialog();
+
+            // Dica: Use telaCadastro.Show(); se quiser manter as duas abertas ao mesmo tempo
+        }
+
+        private void btnPets_Click(object sender, RoutedEventArgs e)
+        {
+            // 1. Cria a instância da nova tela
+            InfoPets telaCadastro = new InfoPets();
+
+            telaCadastro.Owner = this;
+
+            // 2. Abre a tela (ShowDialog bloqueia a principal até fechar a de cadastro)
+            telaCadastro.ShowDialog();
+
+            // Dica: Use telaCadastro.Show(); se quiser manter as duas abertas ao mesmo tempo
+        }
+
+        private void btnAgendamento_Click(object sender, RoutedEventArgs e)
+        {
+            // 1. Cria a instância da nova tela
+            InfoAgendamentos telaCadastro = new InfoAgendamentos();
+
+            telaCadastro.Owner = this;
+
+            // 2. Abre a tela (ShowDialog bloqueia a principal até fechar a de cadastro)
+            telaCadastro.ShowDialog();
+
+            // Dica: Use telaCadastro.Show(); se quiser manter as duas abertas ao mesmo tempo
+        }
+
+        private void btnServicos_Click(object sender, RoutedEventArgs e)
+        {
+            InfoServicos telaCadastro = new InfoServicos();
+
+            telaCadastro.Owner = this;
+
+            telaCadastro.ShowDialog();
 
 
         }
 
-        public void VoltarMenu()
+        private void btnHistorico_Click(object sender, RoutedEventArgs e)
         {
+            InfoHistorico telaCadastro = new InfoHistorico();
 
-            // 1. Remove a página atual do componente visual
-            FramePrincipal.Content = null;
+            telaCadastro.Owner = this;
 
-            // 2. Limpa o histórico de forma segura (apenas se ele realmente existir)
-            while (FramePrincipal.CanGoBack)
-            {
-                FramePrincipal.RemoveBackEntry();
-            }
+            telaCadastro.ShowDialog();
+        }
 
-            // 3. Esconde o Frame para revelar o menu original da MainWindow de volta
-            FramePrincipal.Visibility = Visibility.Collapsed;
+        private void btnRelatorio_Click(object sender, RoutedEventArgs e)
+        {
+            InfoRelatorio telaCadastro = new InfoRelatorio();
+
+            telaCadastro.Owner = this;
+
+            telaCadastro.ShowDialog();
         }
     }
 }
